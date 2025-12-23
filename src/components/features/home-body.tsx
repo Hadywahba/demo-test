@@ -40,6 +40,7 @@ export default function HomeBody() {
       <section className="flex flex-col items-center justify-center gap-5 lg:flex lg:flex-row lg:items-center lg:justify-center">
         {/* Code Part */}
         <div className="mx-4 rounded-[1.25rem] bg-lightCreame lg:mx-0 lg:h-[39.5625rem] lg:w-[36.25rem]">
+          {/* Code Image */}
           <figure>
             <Image
               src="/assets/images/coderunner.png"
@@ -49,6 +50,8 @@ export default function HomeBody() {
               priority
             />
           </figure>
+
+          {/* Code Figure and Caption */}
           <div className="flex flex-col px-[3.75rem]">
             <figure className="pb-5">
               <Image
@@ -72,6 +75,7 @@ export default function HomeBody() {
 
         {/* Meeting Part */}
         <div className="mx-4 rounded-[1.25rem] bg-lightBlue lg:mx-0 lg:h-[39.5625rem] lg:w-[36.25rem]">
+          {/* Meeting Figure and Caption */}
           <div className="flex flex-col px-[3.75rem] pb-[3.2788rem] pt-[3.75rem]">
             <figure className="pb-5">
               <Image
@@ -91,6 +95,8 @@ export default function HomeBody() {
               </p>
             </figcaption>
           </div>
+
+          {/* Meeting Image */}
           <figure>
             <Image
               src="/assets/images/meeter.png"

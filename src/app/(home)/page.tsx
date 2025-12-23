@@ -1,6 +1,7 @@
 import HomeBody from '@/components/features/home-body';
 import HomeBodyTitle from '@/components/features/home-body-title';
 import HomeButton from '@/components/features/home-button';
+import HomeFooter from '@/components/features/home-footer';
 import HomeHeader from '@/components/features/home-header';
 import { HomeLeftGroup, HomeRightGroup } from '@/lib/constants/home-group';
 import Image from 'next/image';
@@ -49,7 +50,7 @@ export default function page() {
         </div>
       </section>
       {/* second Section */}
-      <section className="mx-auto mt-4 flex w-full flex-col border-y-[.0625rem] border-y-[#E5E5E5] lg:w-[73.75rem]">
+      <section className="mx-auto mt-4 flex w-full flex-col border-t-[.0625rem] border-t-[#E5E5E5] lg:w-[73.75rem]">
         {/* Title part */}
         <div>
           <HomeBodyTitle />
@@ -59,6 +60,10 @@ export default function page() {
         <div>
           <HomeBody />
         </div>
+        {/* Footer Part */}
+      <div>
+        <HomeFooter/>
+      </div>
       </section>
     </main>
   );
