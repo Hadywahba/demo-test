@@ -6,11 +6,11 @@ import React from 'react';
 
 export default function page() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col w-full max-w-full overflow-x-hidden">
       {/* First Section */}
-      <section className="mx-auto flex h-[37.2244rem] w-full max-w-[117.5rem] items-start justify-between">
+      <section className="mx-auto flex h-auto min-h-[37.2244rem] w-full max-w-full flex-col items-center justify-center px-4 py-8 md:h-[37.2244rem] md:max-w-[117.5rem] md:flex-row md:items-start md:justify-between md:px-0 md:py-0">
         {/* left */}
-        <div className="flex flex-col pl-20 pt-12 relative">
+        <div className="hidden flex-col pl-20 pt-12 relative lg:flex">
           {HomeLeftGroup.map((item) => (
             <Image
               src={item.image}
@@ -23,7 +23,7 @@ export default function page() {
             />
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full lg:w-auto">
           <HomeHeader />
 
           <div>
@@ -31,7 +31,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="relative flex flex-col pr-10 pt-[3.99rem]">
+        <div className="hidden relative flex-col pr-10 pt-[3.99rem] lg:flex">
           {HomeRightGroup.map((item) => (
             <Image
               src={item.image}

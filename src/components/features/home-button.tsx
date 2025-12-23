@@ -9,7 +9,7 @@ export default function HomeButton() {
         {authButton.map((item) => (
           <button
             key={item.id}
-            className={`rounded-md border-[.0625rem] h-[3.25rem] border-white bg-white ${item.id === 1 ? 'text-darkBlue mr-2 px-8 py-[.875rem] text-base font-normal leading-6 tracking-[.0625rem]' : 'flex w-[3.875rem] items-center justify-center px-[.625rem] py-[.9375rem]'}`}
+            className={`rounded-md border-[.0625rem] h-[3.25rem] border-white bg-white ${item.id === 1 ? 'text-darkBlue mr-2 px-8 py-[.675rem] sm:py-[.875rem] text-xs sm:text-base font-normal md:leading-6 md:tracking-[.0625rem]' : 'flex w-[3.875rem] items-center justify-center px-[.625rem] py-[.9375rem]'}`}
           >
             {item.image && item.alt && (
               <Image
@@ -25,7 +25,7 @@ export default function HomeButton() {
         ))}
       </div>
       <div className="pt-[1.7188rem]">
-        <p className="max-w-[19.8125rem] text-center text-lg font-normal leading-[2.0025rem] text-white mx-auto">
+        <p className="max-w-[19.8125rem] text-center text-sm sm:text-base md:text-lg font-normal leading-[2.0025rem] text-white mx-auto">
           Power up your workflow with Setapp, a smart way to get apps.
         </p>
       </div>

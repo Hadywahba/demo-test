@@ -14,7 +14,7 @@ export default function HomeHeader() {
                   />
                 </div>
                 <div className="w-[42.5rem]">
-                  <p className="px-[3.5394rem] text-center text-[4rem] font-bold leading-[4.24rem] text-white">
+                  <p className="px-[3.5394rem] text-center text-base sm:text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-[2.24rem] md:leading-[3.24rem] lg:leading-[4.24rem] text-white">
                     Dozens of apps. One subscription. $9.99
                   </p>
                 </div>
