@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function page() {
   return (
-    <div>
-      <h1 className="">hhhh</h1>
-    </div>
+    <main>
+    <h1>body</h1>
+    </main>
   );
 }
