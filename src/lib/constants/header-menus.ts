@@ -43,7 +43,7 @@ export const headerSidebar: headerSidebarMenu[] = headersidebarcolumnItems.map(
   }),
 );
 
-// mobile sidebsr
+// mobile sidebar
 const headermobliesidebarcolumnItems: Omit<headerSidebarMenu, 'id'>[] = [
   {
     name: 'How it works',
