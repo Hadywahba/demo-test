@@ -12,7 +12,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <main className="flex items-center justify-between px-10 pt-[1.0625rem]">
+      <main className="flex items-center justify-between px-10 pt-[1.0625rem] pb-[7.375rem]">
         {/* Left section */}
         <section className="py-1">
           <Link href="/">
