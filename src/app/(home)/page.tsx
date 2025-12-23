@@ -1,3 +1,5 @@
+import HomeBody from '@/components/features/home-body';
+import HomeBodyTitle from '@/components/features/home-body-title';
 import HomeButton from '@/components/features/home-button';
 import HomeHeader from '@/components/features/home-header';
 import { HomeLeftGroup, HomeRightGroup } from '@/lib/constants/home-group';
@@ -6,11 +8,11 @@ import React from 'react';
 
 export default function page() {
   return (
-    <main className="flex flex-col w-full max-w-full overflow-x-hidden">
+    <main className="flex w-full max-w-full flex-col overflow-x-hidden">
       {/* First Section */}
-      <section className="mx-auto flex h-auto min-h-[37.2244rem] w-full max-w-full flex-col items-center justify-center px-4 py-8 md:h-[37.2244rem] md:max-w-[117.5rem] md:flex-row md:items-start md:justify-between md:px-0 md:py-0">
+      <section className="mx-auto mb-[8rem] flex h-auto min-h-[37.2244rem] w-full max-w-full flex-col items-center justify-center px-4 py-8 md:h-[37.2244rem] md:max-w-[117.5rem] md:flex-row md:items-start md:justify-between md:px-0 md:py-0">
         {/* left */}
-        <div className="hidden flex-col pl-20 pt-12 relative lg:flex">
+        <div className="relative hidden flex-col pl-20 pt-12 lg:flex">
           {HomeLeftGroup.map((item) => (
             <Image
               src={item.image}
@@ -19,19 +21,20 @@ export default function page() {
               height={item.Height}
               priority
               key={item.id}
-              className={`${item.id === 2 ? "absolute top-44" :item.id === 3 ? "absolute top-44 left-48" :item.id === 4 ?"absolute top-[20.8rem]":item.id === 5 ?"absolute top-[26rem]":""}`}
+              className={`${item.id === 2 ? 'absolute top-44' : item.id === 3 ? 'absolute left-48 top-44' : item.id === 4 ? 'absolute top-[20.8rem]' : item.id === 5 ? 'absolute top-[26rem]' : ''}`}
             />
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center w-full lg:w-auto">
+        {/* body */}
+        <div className="flex w-full flex-col items-center justify-center lg:w-auto">
           <HomeHeader />
 
           <div>
             <HomeButton />
           </div>
         </div>
-
-        <div className="hidden relative flex-col pr-10 pt-[3.99rem] lg:flex">
+        {/* right */}
+        <div className="relative hidden flex-col pr-10 pt-[3.99rem] lg:flex">
           {HomeRightGroup.map((item) => (
             <Image
               src={item.image}
@@ -45,8 +48,17 @@ export default function page() {
           ))}
         </div>
       </section>
-      <section>
-        gdgd
+      {/* second Section */}
+      <section className="mx-auto mt-4 flex w-full flex-col border-y-[.0625rem] border-y-[#E5E5E5] lg:w-[73.75rem]">
+        {/* Title part */}
+        <div>
+          <HomeBodyTitle />
+        </div>
+
+        {/* Body part */}
+        <div>
+          <HomeBody />
+        </div>
       </section>
     </main>
   );
