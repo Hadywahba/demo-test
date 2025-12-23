@@ -12,7 +12,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <main className="flex items-center justify-between px-10 pt-[1.0625rem]">
+      <main className="flex items-center justify-between px-4 pt-[1.0625rem] md:pb-[7.375rem] md:px-10">
         {/* Left section */}
         <section className="py-1">
           <Link href="/">
@@ -77,7 +77,7 @@ export default function Header() {
       {/* Mobile sliding menu */}
       <nav
         aria-label="Mobile menu"
-        className={`fixed right-0 top-0 z-50 h-full w-64 transform bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${isOpen ? 'translate-x-full' : 'translate-x-0'}`}
+        className={`fixed right-0 top-0 z-50 h-full w-64 transform bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <button
           className="mb-4 flex w-full justify-end"
