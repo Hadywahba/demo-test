@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
   return (
     <div>
-       <h1 className='bg-red-50   '>Footer</h1>
+      <h1 className="text-white ">Footer</h1>
     </div>
-  )
+  );
 }

@@ -1,15 +1,23 @@
+'use client';
 import HomeBody from '@/components/features/home-body';
 import HomeBodyTitle from '@/components/features/home-body-title';
 import HomeButton from '@/components/features/home-button';
 import HomeFooter from '@/components/features/home-footer';
 import HomeHeader from '@/components/features/home-header';
+import HomeSlider from '@/components/features/home-slider';
+import SocialMedia from '@/components/features/social-media';
 import { HomeLeftGroup, HomeRightGroup } from '@/lib/constants/home-group';
+import { homeSlider } from '@/lib/constants/home-slider';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function page() {
+export default function Page() {
+  const [index, setIndex] = useState(0);
+  const goToSlide = (i: number) => {
+    setIndex(i);
+  };
   return (
-    <main className="flex w-full max-w-full flex-col overflow-x-hidden">
+    <main className="relative flex w-full max-w-full flex-col overflow-x-hidden">
       {/* First Section */}
       <section className="mx-auto mb-[8rem] flex h-auto min-h-[37.2244rem] w-full max-w-full flex-col items-center justify-center px-4 py-8 md:h-[37.2244rem] md:max-w-[117.5rem] md:flex-row md:items-start md:justify-between md:px-0 md:py-0">
         {/* left */}
@@ -49,6 +57,7 @@ export default function page() {
           ))}
         </div>
       </section>
+
       {/* second Section */}
       <section className="mx-auto mt-4 flex w-full flex-col border-t-[.0625rem] border-t-[#E5E5E5] lg:w-[73.75rem]">
         {/* Title part */}
@@ -61,9 +70,35 @@ export default function page() {
           <HomeBody />
         </div>
         {/* Footer Part */}
-      <div>
-        <HomeFooter/>
-      </div>
+        <div>
+          <HomeFooter />
+        </div>
+      </section>
+
+      {/* Third section */}
+      <section className="relative pb-72 lg:pb-0 h-auto lg:h-[51.375rem] w-full max-w-full px-4 md:px-0 lg:w-[90rem]">
+        <div className=" hidden md:flex h-1/2 bg-primary"></div>
+        <div className=" hidden md:flex h-1/2 items-end justify-center bg-white ">
+          <div className="mb-4 flex space-x-6">
+            {homeSlider.map((_, i) => (
+              <span
+                key={i}
+                onClick={() => goToSlide(i)}
+                className={`h-3 w-3 cursor-pointer rounded-full ${
+                  i === index ? 'bg-[#1D1D22]' : 'bg-[#D5D4D4]'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="absolute inset-0">
+          <HomeSlider index={index} setIndex={setIndex} />
+        </div>
+      </section>
+
+      {/*  */}
+      <section className="bg-white">
+        <SocialMedia />
       </section>
     </main>
   );

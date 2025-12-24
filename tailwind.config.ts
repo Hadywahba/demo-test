@@ -12,7 +12,8 @@ const config: Config = {
         primary: '#2B2D32',
         darkBlue: '#26262B',
         lightCreame: '#F4F0E4',
-        lightBlue:'#384C75'
+        lightBlue:'#384C75',
+        purpule:'#765070'
       },
     },
   },
